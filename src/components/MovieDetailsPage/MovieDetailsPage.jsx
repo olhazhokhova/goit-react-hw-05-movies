@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { BsArrowLeft } from 'react-icons/bs';
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 import s from './MovieDetailsPage.module.css';
 import { fetchMovieById } from '../../services/api';

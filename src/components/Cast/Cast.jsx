@@ -1,5 +1,5 @@
 import s from './Cast.module.css';
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieCast } from '../../services/api';

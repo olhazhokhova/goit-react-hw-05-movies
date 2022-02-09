@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import s from './MoviesPage.module.css';
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { fetchMoviesByQuery } from '../../services/api';
 import Loader from '../Loader';
 

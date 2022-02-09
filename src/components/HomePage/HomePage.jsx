@@ -1,5 +1,5 @@
 import s from './HomePage.module.css';
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { fetchTrendingFilms } from '../../services/api';
