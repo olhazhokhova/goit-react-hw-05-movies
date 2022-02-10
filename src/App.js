@@ -1,11 +1,6 @@
 import './App.css';
 import { lazy, Suspense } from 'react';
 import { Routes, NavLink, Route, Outlet, Navigate } from 'react-router-dom';
-// import HomePage from './components/HomePage';
-// import MoviesPage from './components/MoviesPage';
-// import MovieDetailsPage from './components/MovieDetailsPage';
-// import Cast from './components/Cast';
-// import Reviews from './components/Reviews';
 
 const HomePage = lazy(() => import('./components/HomePage'));
 const MoviesPage = lazy(() => import('./components/MoviesPage'));
@@ -25,7 +20,7 @@ const App = () => {
         </NavLink>
       </header>
       <Suspense fallback={<></>}>
-        <Routes>
+        <Routes basename="https://olhazhokhova.github.io/">
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
           <Route path="/movies/:movieId" element={<MovieDetailsPage />}>

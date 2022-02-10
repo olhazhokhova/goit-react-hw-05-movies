@@ -1,5 +1,4 @@
 import s from './Reviews.module.css';
-// import PropTypes from "prop-types";
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieReviews } from '../../services/api';

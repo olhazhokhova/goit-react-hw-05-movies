@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import s from './MoviesPage.module.css';
-// import PropTypes from "prop-types";
 import { fetchMoviesByQuery } from '../../services/api';
 import Loader from '../Loader';
 
@@ -28,7 +27,7 @@ const MoviesPage = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         setIsLoading(true);
-        setSearchParams({ query: e.currentTarget.elements.query.value })
+        setSearchParams({ query: e.currentTarget.elements.query.value });
     }
 
     return (

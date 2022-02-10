@@ -55,6 +55,10 @@
   padding-top: 300px;
 }
 
+.imgWrap > div {
+  position: absolute;
+}
+
 .img {
   position: absolute;
   top: 0;
