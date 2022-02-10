@@ -20,7 +20,7 @@ const App = () => {
         </NavLink>
       </header>
       <Suspense fallback={<></>}>
-        <Routes basename="https://olhazhokhova.github.io/">
+        <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
           <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
