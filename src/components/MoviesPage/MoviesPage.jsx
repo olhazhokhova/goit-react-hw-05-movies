@@ -10,13 +10,14 @@ const MoviesPage = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [notFound, setNotFound] = useState(false);
     const [searchParams, setSearchParams] = useSearchParams();
+    const [inputValue, setInputValue] = useState('');
     const location = useLocation();
 
     const query = searchParams.get('query');
 
     useEffect(() => {
         setNotFound(false);
-        query && fetchMoviesByQuery(query).then(data => {
+        query && query.length > 0 && fetchMoviesByQuery(query).then(data => {
             setMovies(data.results);
             data.total_results === 0 && setNotFound(true);
         }).finally(() => {
@@ -28,14 +29,18 @@ const MoviesPage = () => {
         e.preventDefault();
         setIsLoading(true);
         setSearchParams({ query: e.currentTarget.elements.query.value });
-        e.currentTarget.elements.query.value = "";
+        setInputValue('');
+    }
+
+    const onInputChange = (e) => {
+        setInputValue(e.currentTarget.value); 
     }
 
     return (
         <>
             <form className={s.form} onSubmit={onSubmit}>
-                <input type="text" className={s.input} name="query" />
-                <button className={s.button}>Search</button>
+                <input type="text" className={s.input} name="query" value={inputValue} onChange={onInputChange}/>
+                <button className={s.button} disabled={inputValue.length === 0}>Search</button>
             </form>
             {isLoading && <Loader />}
             {!isLoading && movies.length > 0 &&
