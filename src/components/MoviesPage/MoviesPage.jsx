@@ -28,6 +28,7 @@ const MoviesPage = () => {
         e.preventDefault();
         setIsLoading(true);
         setSearchParams({ query: e.currentTarget.elements.query.value });
+        e.currentTarget.elements.query.value = "";
     }
 
     return (

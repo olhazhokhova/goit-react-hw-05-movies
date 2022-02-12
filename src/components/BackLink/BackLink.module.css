@@ -1,0 +1,21 @@
+.back {
+  background-color: transparent;
+  border: 1px solid #256799;
+  border-radius: 3px;
+  margin: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  color: #256799;
+  font-size: 14px;
+  padding: 3px 10px;
+  text-decoration: none;
+  transition: background-color 200ms linear;
+}
+
+.back:hover {
+  background-color: #ebffff;
+}
+
+.back svg {
+  margin-right: 5px;
+}
