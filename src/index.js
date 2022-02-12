@@ -6,7 +6,7 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename="https://github.com/olhazhokhova/goit-react-hw-05-movies">
+    <BrowserRouter basename="https://olhazhokhova.github.io/">
       <App />
     </BrowserRouter>
   </React.StrictMode>,
